@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Box
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Box\ here.\r\n\r\n\ @author\ Rene-Angel\ Jaime\r\n\ @version\ (9.6.19)\r\n
+comment1.params=name\ color\ type\ brandName\ size\ isEmpty
+comment1.target=Box(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ boolean)
+numComments=2
