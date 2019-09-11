@@ -2,9 +2,9 @@
 dependency1.from=StaplerRunner
 dependency1.to=Stapler
 dependency1.type=UsesDependency
-editor.fx.0.height=1047
-editor.fx.0.width=974
-editor.fx.0.x=953
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
 editor.fx.0.y=0
 objectbench.height=128
 objectbench.width=934
