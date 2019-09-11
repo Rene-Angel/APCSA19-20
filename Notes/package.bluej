@@ -11,6 +11,7 @@ package.editor.height=173
 package.editor.width=831
 package.editor.x=-7
 package.editor.y=0
+package.frame.height=353
 package.frame.width=974
 package.numDependencies=0
 package.numTargets=7
