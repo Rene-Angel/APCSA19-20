@@ -12,11 +12,14 @@ public class GuessGame
 {
     public static void main(String[] args)
     {
-        double num = Math.random()*10; // someting must be wrong here
-        int guesses = 5;
-        Scanner scan = new Scanner(System.in);
         System.out.println("Guess the number!");
-        while (guesses<0){
+        int num = (int)(Math.random() *10 +1);
+        System.out.println(num);
+        //int randomNum = (int) num;
+        int guesses = 5;
+
+        Scanner scan = new Scanner(System.in);
+        while (guesses>0){
             int guess = scan.nextInt();
             if (guess==num){
                 System.out.println("You got it! The number was "+num+".");

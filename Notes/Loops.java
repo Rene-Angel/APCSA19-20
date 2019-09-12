@@ -40,7 +40,7 @@ public class Loops
         }    
     }
     
-    public static void practice0(){
+    public static void practice0(){ //works
         for (int i=0; i<5; i++){            //1 2 3 4 5
             for (int j=1; j<6; j++){        //1 2 3 4 5
                 System.out.print(j+" ");    //1 2 3 4 5
@@ -48,36 +48,36 @@ public class Loops
             System.out.println();           //1 2 3 4 5
         }
     }
-    public static void practice1(){         //1 
-        for (int row=0; row<6; row++){      //1 2 
-            for (int j=1; j<=row; j++){     //1 2 3 
-                System.out.print(j+" ");    //1 2 3 4 
-            }                               //1 2 3 4 5 
-            System.out.println();           
+    public static void practice1(){ //works
+        for (int row=0; row<6; row++){      //1 
+            for (int j=1; j<=row; j++){     //1 2 
+                System.out.print(j+" ");    //1 2 3 
+            }                               //1 2 3 4 
+            System.out.println();           //1 2 3 4 5 
         }
     }
-    public static void practice2(){         //1 2 3 4 5 
-        for (int i=5; i<6; i++){            //1 2 3 4 
-            for (int j=1; j>=i; j--){       //1 2 3 
-                System.out.print(j+" ");    //1 2 
-            }                               //1 
-            System.out.println();
+    public static void practice2(){ // Needs work
+        for (int i=5; i<6; i++){            //1 2 3 4 5 
+            for (int j=1; j>=i; j--){       //1 2 3 4 
+                System.out.print(j+" ");    //1 2 3 
+            }                               //1 2 
+            System.out.println();           //1 
         }
     }
-    public static void practice3(){         //5 4 3 2 1 
-        for (int i=1; i<6; i++){            //5 4 3 2 
-            for (int j=5; j>=i; j--){       //5 4 3 
-                System.out.print(j+" ");    //5 4 
-            }                               //5 
-            System.out.println();
+    public static void practice3(){ //works
+        for (int i=1; i<6; i++){            //5 4 3 2 1 
+            for (int j=5; j>=i; j--){       //5 4 3 2 
+                System.out.print(j+" ");    //5 4 3 
+            }                               //5 4 
+            System.out.println();           //5 
         }
     }
     public static void practice4(){         //1 1 1 1 1 
         for (int i=1; i<6; i++){            //2 2 2 2 
             for (int j=5; j>=i; j--){       //3 3 3 
-                System.out.print(i+" ");    //4 4 
-            }                               //5 
-            System.out.println();
+                System.out.print(i+" ");    //3 3 3 
+            }                               //4 4 
+            System.out.println();           //5 
         }
     }
     
