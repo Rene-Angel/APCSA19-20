@@ -12,14 +12,15 @@ public class GuessGame
 {
     public static void main(String[] args)
     {
-        double num = Math.random()*10;
-        int guesses = 10;
+        double num = Math.random()*10; // someting must be wrong here
+        int guesses = 5;
         Scanner scan = new Scanner(System.in);
         System.out.println("Guess the number!");
-        while (guesses<=10){
+        while (guesses<0){
             int guess = scan.nextInt();
             if (guess==num){
                 System.out.println("You got it! The number was "+num+".");
+                return;
             } else if (guess > num){
                 System.out.println("Guess Lower!");
                 guesses--;
@@ -29,6 +30,7 @@ public class GuessGame
             }
             if (guesses==0){
                 System.out.println("Sorry, the number was "+num+".");
+                return;
             }
         }
     }
