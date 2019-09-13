@@ -2,32 +2,34 @@
 /**
  * Write a description of class Lucky7s here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Rene-Angel Jaime
+ * @version (9.13.19)
  */
+import java.lang.Math;
 public class Lucky7s
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Lucky7s
+    /*
+     * You start with $15. To play the game, you must wager $1. Two dice are then
+     * rolled. If the result is the number 7, gain $5. Otherwise,
+     * you do not earn any money. Automatically play this game until you run
+     * out of money.
+     * At the end of the game, the program states:
+     * "You lost all your money in X rounds", where X is the number of
+     * rounds that you played.
      */
-    public Lucky7s()
+    
+    public static void Lucky7s()
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        System.out.println("Welcome to Lucky Sevens!.");
+        int moolah = 15;
+        int rolls = 0;
+        int d1 = (int)(Math.random() *6);
+        int d2 = (int)(Math.random() *6);
+        while (moolah > 0){
+            moolah--;
+            rolls++;
+            if (d1+d2=7)
+            
+        }
     }
 }
