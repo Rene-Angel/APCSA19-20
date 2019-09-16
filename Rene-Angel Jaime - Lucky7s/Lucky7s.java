@@ -21,15 +21,23 @@ public class Lucky7s
     public static void Lucky7s()
     {
         System.out.println("Welcome to Lucky Sevens!.");
-        int moolah = 15;
+        int money = 15;
         int rolls = 0;
-        int d1 = (int)(Math.random() *6);
-        int d2 = (int)(Math.random() *6);
-        while (moolah > 0){
-            moolah--;
+        while (money > 0){
+            int d1 = (int)(Math.random() *6 + 1);
+            int d2 = (int)(Math.random() *6 + 1);
+            int total = d1 + d2;
+            money--;
             rolls++;
-            if (d1+d2=7)
-            
+            System.out.println("Round: "+rolls);
+            System.out.println("Money: $"+money);
+            if (total == 7){
+                money +=5;
+                System.out.println("You got $5. :)");
+            } else if (total != 7){
+                System.out.println("Sad chance. :(");
+            }
         }
+        System.out.println("You lost all your money in "+rolls+" rounds.");
     }
 }
