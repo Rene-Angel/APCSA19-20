@@ -71,27 +71,3 @@ public class Stapler
         color = newColor;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
