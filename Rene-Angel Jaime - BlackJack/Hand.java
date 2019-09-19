@@ -7,16 +7,15 @@ import java.lang.Math;
 
 public class Hand
 {
-    int sum;
+    int card;
     public Hand(){
-        sum +=  (int)(Math.random() *11) +1;
-        sum +=  (int)(Math.random() *11) +1;
+        card +=  (int)(Math.random() *11) +1;
+        card +=  (int)(Math.random() *11) +1;
     }
     public void hit(){
-        sum +=  (int)(Math.random() *11) +1;
-        
+         card +=  (int)(Math.random() *11) +1;
     }
-    int getSum(){
-        return sum;
+    int getCard(){
+        return card;
     }
 }

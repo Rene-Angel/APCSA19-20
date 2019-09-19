@@ -12,9 +12,15 @@ public class Game
     static Hand player = new Hand();
     static Hand dealer = new Hand();
     public static void main(String[] args){
-        while (dealer.sum < 17){
-            
+        while (player.getCard() < 21 && dealer.getCard() < 21){
+            System.out.println("Your hand total is "+player.getCard()+".");
+            System.out.println("Hit or Stand?: ");
+            String playerInput = input.nextLine();
+            if (playerInput.equals("hit")){
+                player.hit();
+            } else if (playerInput.equals("stand")){
+                dealer.hit();
+            }
         }
-        
     }
 }

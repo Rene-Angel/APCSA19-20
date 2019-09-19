@@ -5,5 +5,5 @@ comment1.target=Hand()
 comment2.params=
 comment2.target=void\ hit()
 comment3.params=
-comment3.target=int\ getSum()
+comment3.target=int\ getCard()
 numComments=4
