@@ -15,7 +15,9 @@ public class Game
         System.out.println("Welcome to BlackJack!");
         System.out.println("The Dealer shows their first card, "+dealer.card1+", and keeps their second card hidden.");
         System.out.println();
-        while (player.total < 21 && dealer.total < 21){
+        boolean playerTurn = true;
+        boolean dealerTurn = true;
+        while (playerTurn = true){
             System.out.println("Your hand total is "+player.total+".");
             System.out.println("Hit or Stand?: ");
             String playerInput = input.nextLine();
@@ -24,11 +26,17 @@ public class Game
                 player.hit();
                 System.out.println("You drew a "+player.hitCard+".");
             } else if (playerInput.equals("stand")){
-                System.out.println("You decided to stand, and the Dealer plays.");
+                System.out.println("You stand, and the Dealer plays.");
                 System.out.println();
-                System.out.println("Their Second card is "+dealer.card2+", and hand total is "+dealer.total+".");
-                dealer.hit();
-                System.out.println("They drew a "+dealer.hitCard+", anmd their new hand total is "+dealer.total+".");
+                playerTurn = true;
+            }
+        }
+        while (dealerTurn = true){
+            System.out.println("Dealer reveals their card, "+dealer.card2+", the total is "+dealer.total+".");
+            dealer.hit();
+            System.out.println("Dealer drew a "+dealer.hitCard+", and the total is now "+dealer.total+".");
+            if (dealer.total >= 17){
+                dealerTurn = false;
             }
         }
     }
