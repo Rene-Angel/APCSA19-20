@@ -44,7 +44,11 @@ public class Notes3
         System.out.println("This is true");
         System.out.println(a==b);
         System.out.println();
-        
+        /*
+         * == is used between variables and booleans
+         * = is used for integers and other numbers
+         * .equals() is used for strings
+         */
         String c = "this";
         String d = "this";
         System.out.println(c == d); // DO NOT DO THIS!!!!!!!!!!!

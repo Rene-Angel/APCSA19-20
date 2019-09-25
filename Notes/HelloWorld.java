@@ -53,7 +53,7 @@ public class HelloWorld{
         System.out.println(a + b);
         System.out.println(a - b);
         System.out.println(a * b);
-        System.out.println(a / b); // due to tehse numbers being 'integrs', they will be solved as integers and not decimals
+        System.out.println(a / b); // due to tehse numbers being 'integers', they will be solved as integers and not decimals
         System.out.println(19/10); // same goes for tyhese numbers
 
         // Here is how to fix it
