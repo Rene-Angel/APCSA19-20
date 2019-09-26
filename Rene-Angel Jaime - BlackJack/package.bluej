@@ -2,10 +2,10 @@
 dependency1.from=Game
 dependency1.to=Hand
 dependency1.type=UsesDependency
-editor.fx.0.height=800
+editor.fx.0.height=1047
 editor.fx.0.width=1386
-editor.fx.0.x=410
-editor.fx.0.y=247
+editor.fx.0.x=523
+editor.fx.0.y=0
 objectbench.height=101
 objectbench.width=762
 package.divider.horizontal=0.6

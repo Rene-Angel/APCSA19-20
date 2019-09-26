@@ -41,7 +41,4 @@ public class Hand
     public int getTotal(){
         return total;
     }
-    public boolean getBust(){
-        return bust;
-    }
 }

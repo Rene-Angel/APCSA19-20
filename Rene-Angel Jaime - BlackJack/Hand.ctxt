@@ -14,6 +14,4 @@ comment6.params=
 comment6.target=int\ getHitCard()
 comment7.params=
 comment7.target=int\ getTotal()
-comment8.params=
-comment8.target=boolean\ getBust()
-numComments=9
+numComments=8
