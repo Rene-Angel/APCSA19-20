@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Magpie2
+comment0.text=\r\n\ @author\ Rene-Angel\ Jaime\r\n\ @version\ (10.1.19)\r\n
+comment1.params=
+comment1.target=java.lang.String\ getGreeting()
+comment1.text=\r\n\ Question\:\ What\ happens\ when\ a\ keyword\ is\ included\ in\ another\ word?\r\n\ \ \ \ \ \ \ \ \ \ \ Consider\ statements\ like\ "I\ know\ all\ the\ state\ capitals"\ and\ "I\ like\r\n\ \ \ \ \ \ \ \ \ \ \ vegetables\ smothered\ in\ cheese."\ Explain\ the\ problem\ with\ the\ responses\r\n\ \ \ \ \ \ \ \ \ \ \ to\ these\ statements.\r\n\ \ \ \ \ \ \ \ \ \ \ \r\n\ Response\:\ When\ a\ keyword\ is\ included\ in\ another\ word,\ the\ response\ will\ be\ to\ the\r\n\ \ \ \ \ \ \ \ \ \ \ keyword\ as\ it\ is\ detected\ within\ the\ statement,\ instead\ of\ the\ entire\r\n\ \ \ \ \ \ \ \ \ \ \ statement\ in\ general.\ What\ is\ wrong\ with\ these\ specific\ statements\ are\ \r\n\ \ \ \ \ \ \ \ \ \ \ the\ keywords\ "no"\ and\ "mother"\ that\ the\ program\ detects\ in\ the\ words\ "know"\ \r\n\ \ \ \ \ \ \ \ \ \ \ and\ "smothered",\ thus\ responding\ with\ "Why\ so\ negative?"\ and\ "Tell\ me\ more\ \r\n\ \ \ \ \ \ \ \ \ \ \ about\ your\ family."\r\n\ \r\n
+comment2.params=statement
+comment2.target=java.lang.String\ getResponse(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getRandomResponse()
+numComments=4

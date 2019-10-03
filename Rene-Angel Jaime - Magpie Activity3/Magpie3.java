@@ -1,32 +1,15 @@
 /**
- * A program to carry on conversations with a human user.
- * This version: 
- * <ul><li>
- *    Uses advanced search for keywords 
- * </li></ul> 
- *    
- * @author Laurie White
- * @version April 2012
+ * @author Rene-Angel Jaime
+ * @version (10.3.19)
  */
+
 public class Magpie3
 {
-	/**
-	 * Get a default greeting
-	 * 
-	 * @return a greeting
-	 */
 	public String getGreeting()
 	{
 		return "Hello, let's talk.";
 	}
 
-	/**
-	 * Gives a response to a user statement
-	 * 
-	 * @param statement
-	 *            the user statement
-	 * @return a response based on the rules given
-	 */
 	public String getResponse(String statement)
 	{
 		String response = "";

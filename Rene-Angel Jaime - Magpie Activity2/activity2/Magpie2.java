@@ -4,6 +4,20 @@
  */
 public class Magpie2
 {
+    /*
+     * Question: What happens when a keyword is included in another word?
+     *           Consider statements like "I know all the state capitals" and "I like
+     *           vegetables smothered in cheese." Explain the problem with the responses
+     *           to these statements.
+     *           
+     * Response: When a keyword is included in another word, the response will be to the
+     *           keyword as it is detected within the statement, instead of the entire
+     *           statement in general. What is wrong with these specific statements are 
+     *           the keywords "no" and "mother" that the program detects in the words "know" 
+     *           and "smothered", thus responding with "Why so negative?" and "Tell me more 
+     *           about your family."
+     * 
+     */
     public String getGreeting()
     {
         return "Hello, let's talk.";
@@ -62,17 +76,6 @@ public class Magpie2
         double r = Math.random();
         int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
         String response = "";
-        
-        /*
-         * Question: What happens when a keyword is included in another word?
-         *           Consider statements like "I know all the state capitals" and "I like
-         *           vegetables smothered in cheese." Explain the problem with the responses
-         *           to these statements.
-         *           
-         * Response: When a keyword is included in another word, the responses
-         * 
-         * 
-         */
         
         if (whichResponse == 0)
         {
