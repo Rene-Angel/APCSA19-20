@@ -44,15 +44,15 @@ public class Magpie2
         {
             response = "Tell me more about your pets.";
         }
-        else if (statement.trim().indexOf("hmm") >= 0)
+        else if (statement.trim().indexOf("hmm") >= 0) //Keyword 1
         {
             response = "Yes?";
         }
-        else if (statement.trim().indexOf("hello") >= 0)
+        else if (statement.trim().indexOf("hello") >= 0) // Keyword 2
         {
             response = "Have we met?";
         }
-        else if (statement.trim().indexOf("yes") >= 0)
+        else if (statement.trim().indexOf("yes") >= 0) //Keyword 3
         {
             response = "Yes, what?";
         }
