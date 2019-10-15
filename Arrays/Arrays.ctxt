@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Arrays
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=Arrays()
+comment3.params=
+comment3.target=void\ changeNums()
+comment4.params=
+comment4.target=void\ printArray()
+numComments=5
