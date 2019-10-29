@@ -3,7 +3,7 @@
  * @version (10.15.19)
  */
 import java.util.Scanner;
-public class Arrays
+public class Notes
 {
     int[] newArray = new int[100];
     Scanner[] scannerArray = new Scanner[40];
@@ -13,7 +13,7 @@ public class Arrays
     {
         System.out.println("Hello World!");
     }
-    public Arrays()
+    public Notes()
     {
         newArray[0] = 5;
         newArray[1] = 9;

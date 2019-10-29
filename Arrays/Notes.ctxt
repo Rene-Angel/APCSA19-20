@@ -1,9 +1,9 @@
 #BlueJ class context
-comment0.target=Arrays
+comment0.target=Notes
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment2.params=
-comment2.target=Arrays()
+comment2.target=Notes()
 comment3.params=
 comment3.target=void\ changeNums()
 comment4.params=
