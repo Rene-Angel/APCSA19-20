@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Array
+comment0.text=\r\n\ @author\ Rene-Angel\ Jaime\r\n\ @version\ (10.29.19)\r\n
+comment1.params=
+comment1.target=void\ main()
+comment2.params=myArray
+comment2.target=void\ printArray(int[])
+numComments=3
