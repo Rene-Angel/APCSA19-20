@@ -30,7 +30,7 @@ public class StringUtil
        int psn = str.indexOf(oldStr);
        // Create a loop that keeps going until we no longer have to replace stuff
        while (psn != -1){
-           return newStr;
+           
        }
        return str;
     }
