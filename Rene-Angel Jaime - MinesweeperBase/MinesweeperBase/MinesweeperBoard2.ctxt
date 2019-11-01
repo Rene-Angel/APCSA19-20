@@ -2,8 +2,8 @@
 comment0.target=MinesweeperBoard2
 comment1.params=row\ col
 comment1.target=MinesweeperBoard2(int,\ int)
-comment2.params=bombs
-comment2.target=void\ addBombs(int)
+comment2.params=Mines
+comment2.target=void\ addMines(int)
 comment3.params=
 comment3.target=void\ addNums()
 comment4.params=

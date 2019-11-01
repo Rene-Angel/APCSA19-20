@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 public class Cell implements ActionListener{
     //Variables you need to work with
     int value;
-    
+    boolean isMine;
     //Variables you don't need to worry about or care about.
     private JButton button;
     /**
@@ -30,8 +30,8 @@ public class Cell implements ActionListener{
      * 
      * @return True if it is a bomb, otherwse false.
      */
-    boolean isBomb(){
-        if(value == 1){
+    boolean isMine(){ // Part 1
+        if(value == -1){
             return true;
         } else{
             return false;
@@ -47,7 +47,7 @@ public class Cell implements ActionListener{
         displayValue();
     }
     public void displayValue(){
-        if(this.isBomb()){
+        if(this.isMine()){
             button.setText("\u2600");
             button.setBackground(Color.RED);
         }else if(value!=0){

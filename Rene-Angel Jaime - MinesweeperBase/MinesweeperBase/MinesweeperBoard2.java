@@ -14,10 +14,10 @@ public class MinesweeperBoard2{
     Cell[] board;
     int rows;
     int columns;
-    public MinesweeperBoard2(int row, int col){
+    public MinesweeperBoard2(int row, int col){ // Part 2
         //Put the constructor here.
-        row = rows;
-        col = columns;
+        rows = row;
+        columns = col;
         board = new Cell[rows*columns];
         //These pieces are for the GUI.
         JFrame frame = new JFrame();
@@ -28,11 +28,11 @@ public class MinesweeperBoard2{
         frame.setVisible(true);
     }
 
-    public void addBombs(int bombs) throws Exception{
+    public void addMines(int Mines) throws Exception{ // Part 3
         
     }
 
-    public void addNums(){
+    public void addNums(){ // Part 4
         
     }
     /**This method is used for testing and will be deleted if using the GUI.
