@@ -29,7 +29,10 @@ public class MinesweeperBoard2{
     }
 
     public void addMines(int Mines) throws Exception{ // Part 3
-        
+        double randomRow = Math.random()*rows+1;
+        randomRow = (int) randomRow;
+        double randomCol = Math.random()*columns+1;
+        randomCol = (int) randomCol;
     }
 
     public void addNums(){ // Part 4
@@ -39,13 +42,15 @@ public class MinesweeperBoard2{
      *  It is still required for all students.
      */
     public void printBoard(){
-        
+        for(int i = 0; i< rows*columns; i++){
+            
+        }
     }
     public JPanel addCells(){
         JPanel panel = new JPanel(new GridLayout(rows,columns));
         for(int i = 0; i< rows*columns; i++){
-                board[i]= new Cell();
-                panel.add(board[i].getButton());
+            board[i]= new Cell();
+            panel.add(board[i].getButton());
         }
         return panel;
     }
