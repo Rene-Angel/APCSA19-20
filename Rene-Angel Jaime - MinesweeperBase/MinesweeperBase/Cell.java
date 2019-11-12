@@ -30,12 +30,17 @@ public class Cell implements ActionListener{
      * 
      * @return True if it is a bomb, otherwse false.
      */
+    public int getValue(){
+        return value;
+    }
     boolean isMine(){ // Part 1
         if(value == -1){
             return true;
         } else{
             return false;
         }
+       
+        // This would simplify it? return value == -1;
     }
     
     //Additional Methods may be required. Please make them yourself.
