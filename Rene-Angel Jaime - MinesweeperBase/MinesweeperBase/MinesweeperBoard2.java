@@ -39,7 +39,9 @@ public class MinesweeperBoard2{
     }
 
     public void addNums(){ // Part 4
-        
+        for(int i = columns; i < rows*columns; i++){
+            
+        }
     }
     /**This method is used for testing and will be deleted if using the GUI.
      *  It is still required for all students.
