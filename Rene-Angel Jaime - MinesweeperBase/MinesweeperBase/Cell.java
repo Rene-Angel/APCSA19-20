@@ -12,8 +12,8 @@ import java.awt.event.ActionListener;
 
 public class Cell implements ActionListener{
     //Variables you need to work with
-    int value;
-    boolean isMine;
+    private int value;
+    
     //Variables you don't need to worry about or care about.
     private JButton button;
     /**
@@ -33,14 +33,15 @@ public class Cell implements ActionListener{
     public int getValue(){
         return value;
     }
+    public void changeValue(int newValue){
+        value = newValue;
+    }
     boolean isMine(){ // Part 1
         if(value == -1){
             return true;
-        } else{
-            return false;
         }
-       
-        // This would simplify it? return value == -1;
+        return false;
+        // Would this would simplify it? "return value == -1;"
     }
     
     //Additional Methods may be required. Please make them yourself.

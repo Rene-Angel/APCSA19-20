@@ -63,7 +63,6 @@ public class Stapler
         return size;
     }
     //Mutator Methods
-    
     public void changeName(String newName){
         name = newName;
     }

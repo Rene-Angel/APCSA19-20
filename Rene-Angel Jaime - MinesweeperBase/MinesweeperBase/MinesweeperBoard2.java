@@ -5,6 +5,13 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+
+// 1 isBomb() DONE
+// 2 BoardConstructor() DONE
+// 3 printBoard() Done?
+// 4 addMines() not done
+// 5 addNums() not done
+
 import java.lang.Math;
 import javax.swing.*;
 import java.awt.*;
@@ -32,8 +39,8 @@ public class MinesweeperBoard2{
         for(int i = 0; i < Mines; i++){
             double pos = Math.random() * (rows*columns);
             pos = (int) pos;
-            if(board[i].isMine() == false){
-                board[i].isMine = true;
+            if(!board[i].isMine()){
+                board[i].changeValue(-1);
             }
         }
     }
@@ -47,7 +54,7 @@ public class MinesweeperBoard2{
      *  It is still required for all students.
      */
     public void printBoard(){
-        System.out.println("     Minesweeper");
+        System.out.println("Minesweeper");
         for(int i = columns; i < rows*columns; i++){
             if(i % columns == 0){
                 System.out.println();
