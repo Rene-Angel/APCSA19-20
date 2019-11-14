@@ -8,8 +8,8 @@
 
 // 1 isBomb() DONE
 // 2 BoardConstructor() DONE
-// 3 printBoard() Done?
-// 4 addMines() not done
+// 3 printBoard() DONE
+// 4 addMines() Done
 // 5 addNums() not done
 
 import java.lang.Math;
@@ -36,11 +36,11 @@ public class MinesweeperBoard2{
     }
 
     public void addMines(int Mines) throws Exception{ // Part 3
-        for(int i = 0; i < Mines; i++){
-            double pos = Math.random() * (rows*columns);
-            pos = (int) pos;
-            if(!board[i].isMine()){
-                board[i].changeValue(-1);
+        for(int i = 0; i < Mines;){
+            int pos =  (int) (Math.random() * (rows*columns));
+            if(!board[pos].isMine()){
+                board[pos].changeValue(-1);
+                i++; // variable i will increment here so that the mines aren't stacked
             }
         }
     }
@@ -54,12 +54,19 @@ public class MinesweeperBoard2{
      *  It is still required for all students.
      */
     public void printBoard(){
+        System.out.println();
         System.out.println("Minesweeper");
-        for(int i = columns; i < rows*columns; i++){
+        for(int i = 0; i < rows*columns; i++){
             if(i % columns == 0){
                 System.out.println();
             }
-            System.out.print(board[i].getValue());
+            if(board[i].getValue() == -1){
+                System.out.print(" X ");
+            } else{                                         // printed...
+                System.out.print(" ");                      // 0 X 0 
+                System.out.print(board[i].getValue());      // X 0 X
+                System.out.print(" ");                      // X 0 0
+            }
         }
     }
     public JPanel addCells(){

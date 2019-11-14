@@ -41,7 +41,7 @@ public class Cell implements ActionListener{
             return true;
         }
         return false;
-        // Would this would simplify it? "return value == -1;"
+        // Would this would simplify it? "return value == -1;" I'm not to sure if it will
     }
     
     //Additional Methods may be required. Please make them yourself.
