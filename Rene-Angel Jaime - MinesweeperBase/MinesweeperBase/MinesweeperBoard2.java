@@ -36,12 +36,16 @@ public class MinesweeperBoard2{
     }
 
     public void addMines(int Mines) throws Exception{ // Part 3
-        for(int i = 0; i < Mines;){
-            int pos =  (int) (Math.random() * (rows*columns));
-            if(!board[pos].isMine()){
-                board[pos].changeValue(-1);
-                i++; // variable i will increment here so that the mines aren't stacked
+        if(Mines < rows*columns){
+            for(int i = 0; i < Mines;){
+                int pos =  (int) (Math.random() * (rows*columns));
+                if(!board[pos].isMine()){
+                    board[pos].changeValue(-1);
+                    i++; // variable i will increment here so that the mines aren't stacked
+                }
             }
+        } else if(Mines > rows*columns){
+            throw new Exception("That's too many mines there...");
         }
     }
 

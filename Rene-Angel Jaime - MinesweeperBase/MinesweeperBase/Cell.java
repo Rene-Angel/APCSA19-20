@@ -36,11 +36,15 @@ public class Cell implements ActionListener{
     public void changeValue(int newValue){
         value = newValue;
     }
+    public void inc(){
+        value++;
+    }
     boolean isMine(){ // Part 1
         if(value == -1){
             return true;
+        } else{
+            return false;
         }
-        return false;
         // Would this would simplify it? "return value == -1;" I'm not to sure if it will
     }
     
