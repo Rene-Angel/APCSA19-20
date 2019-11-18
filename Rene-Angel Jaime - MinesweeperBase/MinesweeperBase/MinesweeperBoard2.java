@@ -21,6 +21,7 @@ public class MinesweeperBoard2{
     Cell[] board;
     int rows;
     int columns;
+    
     public MinesweeperBoard2(int row, int col){ // Part 2
         //Put the constructor here.
         rows = row;
@@ -34,7 +35,7 @@ public class MinesweeperBoard2{
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
-
+    
     public void addMines(int Mines) throws Exception{ // Part 3
         if(Mines < rows*columns){
             for(int i = 0; i < Mines;){
@@ -50,15 +51,28 @@ public class MinesweeperBoard2{
     }
 
     public void addNums(){ // Part 4
-        for(int i = columns; i < rows*columns; i++){
-            
+        for(int i = 0; i < rows*columns; i++){
+            if(board[i].isMine()){
+                //Right
+                if (i+1 < board.length && !board[i+1].isMine()){
+                    board[i+1].inc();
+                }
+                //Left
+                if (i-1 >= board.length && !board[i-1].isMine()){
+                    board[i-1].inc();
+                }
+                //Above
+                if (i-rows >= board.length && !board[i-rows].isMine()){
+                    board[i-rows].inc();
+                }
+            }
         }
     }
     /**This method is used for testing and will be deleted if using the GUI.
      *  It is still required for all students.
      */
     public void printBoard(){
-        System.out.println();
+        System.out.println("");
         System.out.println("Minesweeper");
         for(int i = 0; i < rows*columns; i++){
             if(i % columns == 0){
