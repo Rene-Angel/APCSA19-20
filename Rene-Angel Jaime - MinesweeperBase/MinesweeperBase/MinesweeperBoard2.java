@@ -35,7 +35,6 @@ public class MinesweeperBoard2{
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
-    
     public void addMines(int Mines) throws Exception{ // Part 3
         if(Mines < rows*columns){
             for(int i = 0; i < Mines;){
@@ -49,21 +48,19 @@ public class MinesweeperBoard2{
             throw new Exception("That's too many mines there...");
         }
     }
-
     public void addNums(){ // Part 4
         for(int i = 0; i < rows*columns; i++){
             if(board[i].isMine()){
-                //Right
-                if (i+1 < board.length && !board[i+1].isMine()){
+                //Right & Left
+                if (i + 1 < board.length && !board[i+1].isMine() && i+1 % columns != 0){
                     board[i+1].inc();
                 }
-                //Left
-                if (i-1 >= board.length && !board[i-1].isMine()){
-                    board[i-1].inc();
+                if (i - 1 < board.length && !board[i - 1].isMine() && i - 1 % columns != 0){
+                    board[i - 1].inc();
                 }
-                //Above
-                if (i-rows >= board.length && !board[i-rows].isMine()){
-                    board[i-rows].inc();
+                //Above (doesnt work)
+                if (i - rows >= board.length && !board[i - rows].isMine() && i - 1 % columns != 0){
+                    board[i - rows].inc();
                 }
             }
         }
