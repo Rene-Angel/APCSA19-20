@@ -59,7 +59,7 @@ public class MinesweeperBoard2{
                     board[i - 1].inc();
                 }
                 //Above (doesnt work)
-                if (i - rows >= board.length && !board[i - rows].isMine() && i - 1 % columns != 0){
+                if (i - rows > board.length && !board[i - rows].isMine() && i - rows % columns != 0){
                     board[i - rows].inc();
                 }
             }
