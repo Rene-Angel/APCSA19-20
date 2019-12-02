@@ -1,17 +1,14 @@
-
 /**
  * Write a description of class Minesweeper here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Rene-Angel Jaime 
+ * @version (12.2.19)
  */
-
 // 1 isBomb() DONE
 // 2 BoardConstructor() DONE
 // 3 printBoard() DONE
 // 4 addMines() Done
 // 5 addNums() not done
-
 import java.lang.Math;
 import javax.swing.*;
 import java.awt.*;
@@ -52,15 +49,32 @@ public class MinesweeperBoard2{
         for(int i = 0; i < rows*columns; i++){
             if(board[i].isMine()){
                 //Right & Left
-                if (i + 1 < board.length && !board[i+1].isMine() && i+1 % columns != 0){
+                if (i+1 < board.length && !board[i+1].isMine() && i+1 % columns != 0){
                     board[i+1].inc();
                 }
-                if (i - 1 < board.length && !board[i - 1].isMine() && i - 1 % columns != 0){
-                    board[i - 1].inc();
+                if (i-1 >= 0 && !board[i-1].isMine() && i-1 % columns != 0){
+                    board[i-1].inc();
                 }
-                //Above (doesnt work)
-                if (i - rows > board.length && !board[i - rows].isMine() && i - rows % columns != 0){
-                    board[i - rows].inc();
+                //Above & Below
+                if (i-rows >= 0 && !board[i-rows].isMine() && i-rows % columns != 0){
+                    board[i-rows].inc();
+                }
+                if (i+rows < board.length && !board[i+rows].isMine() && i+rows % columns != 0){
+                    board[i+rows].inc();
+                }
+                // Left Diagonals
+                if (i-rows-1 >= 0 && !board[i-rows-1].isMine() && i-rows-1 % columns != 0){
+                    board[i-rows-1].inc();
+                }
+                if (i+rows-1 < board.length && !board[i+rows-1].isMine() && i+rows-1 % columns != 0){
+                    board[i+rows-1].inc();
+                }
+                // Right Diagonals
+                if (i-rows+1 >= 0 && !board[i-rows+1].isMine() && i-rows+1 % columns != 0){
+                    board[i-rows+1].inc();
+                }
+                if (i+rows+1 < board.length && !board[i+rows+1].isMine() && i+rows+1 % columns != 0){
+                    board[i+rows+1].inc();
                 }
             }
         }
