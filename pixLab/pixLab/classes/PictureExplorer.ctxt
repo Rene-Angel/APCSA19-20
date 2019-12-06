@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=PictureExplorer
-comment0.text=\ Activity\ 3\ -\ Question\r\n\ \r\n
+comment0.text=\ Activity\ 3\ -\ Questions\r\n\ \ 1)\ The\ Row\ index\ for\ the\ top\ left\ corner\ of\ the\ picture\:\ 0\r\n\ \ 2)\ The\ Column\ index\ for\ the\ top\ left\ corner\ of\ the\ picture\:\ 0\r\n\ \ 3)\ Image\ width\ -\ 640,\ Right\ most\ column\ index\:\ 639\r\n\ \ 4)\ Image\ height\ -\ 480,\ Bottom\ most\ Row\ index\:\ 479\r\n\ \ 5)\ The\ row\ index\ increases\ from\ the\ left\ to\ right.\r\n\ \ 6)\ The\ column\ index\ increases\ from\ the\ top\ to\ the\ bottom.\r\n\ \ 7)\ By\ setting\ the\ zoom\ to\ 500%\ I\ can\ see\ the\ squares\ of\ color.\r\n
 comment1.params=picture
 comment1.target=PictureExplorer(DigitalPicture)
 comment1.text=\r\n\ Public\ constructor\ \r\n\ @param\ picture\ the\ picture\ to\ explore\r\n

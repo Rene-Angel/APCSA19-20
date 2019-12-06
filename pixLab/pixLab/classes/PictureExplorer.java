@@ -18,8 +18,14 @@ import javax.swing.border.*;
  * @author Barb Ericson ericson@cc.gatech.edu
  */
 
-/* Activity 3 - Question
- * 
+/* Activity 3 - Questions
+ *  1) The Row index for the top left corner of the picture: 0
+ *  2) The Column index for the top left corner of the picture: 0
+ *  3) Image width - 640, Right most column index: 639
+ *  4) Image height - 480, Bottom most Row index: 479
+ *  5) The row index increases from the left to right.
+ *  6) The column index increases from the top to the bottom.
+ *  7) By setting the zoom to 500% I can see the squares of color.
  */
 
 public class PictureExplorer implements MouseMotionListener, ActionListener, MouseListener

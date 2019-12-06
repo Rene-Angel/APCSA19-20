@@ -9,6 +9,12 @@ import java.awt.Color;
  * 
  * @author Barb Ericson ericson@cc.gatech.edu
  */
+
+/* Activity 1 - Questions
+ *  1) It takes 8 bits to represent values from 0 to 255.
+ *  2) It takes 3 bytes to represent a color.
+ *  3) There are about 307200 pixels total in a 640x480 image.
+ */
 public class ColorChooser 
 {
   
