@@ -46,6 +46,63 @@ public class IntArrayWorker
   }
   
   /**
+   * Method made by following the first Activty 4 exercise
+   *  @author Rene-Angel Jaime
+   *  @version (12.11.19)
+   *  Works? Yes
+   */
+  public int getCount(int value)
+  {
+      int count = 0;
+      for (int row = 0; row < matrix.length; row++)
+      {
+          for (int col = 0; col < matrix[0].length; col++)
+          {
+              if(matrix[row][col] == value)
+              {
+                  count++;
+              }
+          }
+      }
+      return count;
+  }
+  
+  /**
+   * Method made by following the second Activty 4 exercise
+   *  @author Rene-Angel Jaime
+   *  @version (12.11.19)
+   *  Works? Yes
+   */
+  public int getLargest()
+  {
+      int largeNum = 0;
+      for (int row = 0; row < matrix.length; row++)
+      {
+          for (int col = 0; col < matrix[0].length; col++)
+          {
+              if (col > col - 1)
+              {
+                  largeNum = largeNum + col;
+              }
+          }
+      }
+      return largeNum;
+  }
+  
+  public int getColTotal(int value)
+  {
+      int colTotal = 0;
+      for (int row = 0; row < matrix.length; row++)
+      {
+          for (int col = 0; col< matrix[0].length; col++)
+          {
+              colTotal = colTotal + matrix[0].length;
+          }
+      }
+      return colTotal;
+  }
+  
+  /**
    * Method to fill with an increasing count
    */
   public void fillCount()
