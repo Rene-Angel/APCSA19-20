@@ -96,7 +96,7 @@ public class IntArrayWorker
       {
           for (int col = 0; col< matrix[0].length; col++)
           {
-              colTotal = colTotal + matrix[0].length;
+              colTotal++;
           }
       }
       return colTotal;

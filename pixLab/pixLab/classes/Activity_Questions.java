@@ -60,6 +60,9 @@ public class Activity_Questions
      *         return largeNum;
      *     }
      *  3) public int getColTotal()
+     *     {
+     *         int colTotal = 0;
+     *     }
      *  
      */
 }
