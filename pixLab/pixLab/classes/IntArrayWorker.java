@@ -46,9 +46,11 @@ public class IntArrayWorker
   }
   
   /**
-   * Method made by following the first Activty 4 exercise
+   * Methods made by following the Activty 4 exercises
    *  @author Rene-Angel Jaime
    *  @version (12.11.19)
+   *  
+   *  Exercise 3
    *  Works? Yes
    */
   public int getCount(int value)
@@ -65,12 +67,9 @@ public class IntArrayWorker
           }
       }
       return count;
-  }
-  
+    }
   /**
-   * Method made by following the second Activty 4 exercise
-   *  @author Rene-Angel Jaime
-   *  @version (12.11.19)
+   *  Exercise 2
    *  Works? Yes
    */
   public int getLargest()
@@ -88,18 +87,18 @@ public class IntArrayWorker
       }
       return largeNum;
   }
-  
-  public int getColTotal(int value)
+  /**
+   *  Exercise 3
+   *  Works? Yes
+   */
+  public int getColTotal(int c)
   {
-      int colTotal = 0;
-      for (int row = 0; row < matrix.length; row++)
+      int cTotal = 0;
+      for (int r = 0; r < matrix.length; r++)
       {
-          for (int col = 0; col< matrix[0].length; col++)
-          {
-              colTotal++;
-          }
+          cTotal = cTotal + matrix[r][c];
       }
-      return colTotal;
+      return cTotal;
   }
   
   /**

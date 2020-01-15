@@ -7,7 +7,7 @@
  */
 public class Activity_Questions
 {
-    /*  Activity 1 - Questions
+    /**  Activity 1 - Questions
      *  1) It takes 8 bits to represent values from 0 to 255.
      *  2) It takes 3 bytes to represent a color.
      *  3) There are about 307200 pixels total in a 640x480 image.
@@ -61,8 +61,23 @@ public class Activity_Questions
      *     }
      *  3) public int getColTotal()
      *     {
-     *         int colTotal = 0;
+     *         int cTotal = 0;
+     *         for (int r = 0; r < matrix.length; r++)
+     *         {
+     *             cTotal = cTotal + matrix[r][c];
+     *         }
+     *         return cTotal;
      *     }
-     *  
+     *  -----------------------------------------------------------------
+     *  Activity 5 - Questions
+     *  1) "getPixels2D" method not found in "Picture.java".
+     *  2) "getPixels2D" method found in "SimplePicture.java".
+     *  3) "DigitalPicture p = new DigialPicture();" does not compile.
+     *  4) "DigitalPicture p = new SimplePicture();" compiles.
+     *  5) "DigitalPicture p = new Picture();" compiles.
+     *  6) "SimplePicture p = new Picture();" compiles.
+     *  7) "Picture p = new SimplePicture();" does not compile.
+     *  -----------------------------------------------------------------
+     *  Activity 6 -
      */
 }
