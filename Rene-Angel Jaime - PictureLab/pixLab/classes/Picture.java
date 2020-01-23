@@ -98,11 +98,6 @@ public class Picture extends SimplePicture
     }
   }
   
-  /** Method to negate all the pixels in the picture */
-  public void negate(){
-      pixe
-  }
-  
   public void keepOnlyBlue(){
       Pixel[][] pixels = this.getPixels2D();
       for(Pixel[] rowArray : pixels){
