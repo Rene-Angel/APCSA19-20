@@ -77,6 +77,21 @@ public class Activity_Questions
      *  5) "DigitalPicture p = new Picture();" compiles.
      *  6) "SimplePicture p = new Picture();" compiles.
      *  7) "Picture p = new SimplePicture();" does not compile.
+     *  Activty 5 - Exercises
+     *  3) public void keepOnlyBlue()
+     *     {
+     *         Pixel[][] pixels = this.getPixels2D();
+     *         for(Pixel[] rowArray : pixels){
+     *            for(Pixel pixelObj : rowArray){
+     *                pixelObj.setRed(0);
+     *                pixelObj.setGreen(0);
+     *            }
+     *         }
+     *      }
+     *  4) public void negate(){
+     *     {
+     *         Pixel[][] pixels = tyhis.getPixels2D();
+     *         for(Pixel[] rowArray)
      *  -----------------------------------------------------------------
      *  Activity 6 -
      */
