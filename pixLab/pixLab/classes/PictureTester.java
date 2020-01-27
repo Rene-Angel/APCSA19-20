@@ -25,6 +25,14 @@ public class PictureTester
       beach.explore();
   }
   
+  /** Method to test grayscale */
+  public static void testGrayscale(){
+      Picture beach = new Picture("beach.jpg");
+      beach.explore();
+      beach.grayscale();
+      beach.explore();
+  }
+  
   /** Method to test keepOnlyBlue */
   public static void testKeepOnlyBlue(){
       Picture beach = new Picture("beach.jpg");
@@ -78,8 +86,8 @@ public class PictureTester
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    testNegate();
-    //testGrayscale();
+    //testNegate();
+    testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
