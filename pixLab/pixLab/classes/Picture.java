@@ -98,6 +98,18 @@ public class Picture extends SimplePicture
     }
   }
   
+  /** Method to fix images that are underwater */
+  public void fixUnderwater(){
+      Pixel[][] pixels = this.getPixels2D();
+      for(Pixel[] rowArray : pixels){
+          for(Pixel pixelObj : rowArray){
+              pixelObj.setBlue(50+pixelObj.getBlue());
+              pixelObj.setGreen(50-pixelObj.getGreen());
+              pixelObj.setRed(50+pixelObj.getRed());
+          }
+      }
+  }
+  
   /** Method to grayscale all the pixels in the picture */
   public void grayscale()
   {
@@ -156,6 +168,55 @@ public class Picture extends SimplePicture
     } 
   }
   
+  /** Method that mirrors the picture around a 
+    * vertical mirror in the center of the picture 
+    * from right to left */
+  public void mirrorVerticalRTL(){
+      Pixel[][] pixels = this.getPixels2D();
+      Pixel leftPixel = null;
+      Pixel rightPixel = null;
+      int w = pixels[0].length;
+      for(int r = 0; r < pixels.length; r++){
+          for(int c = 0; c < w / 2; c++){
+              leftPixel = pixels[r][c];
+              rightPixel = pixels[r][w-1-c];
+              leftPixel.setColor(rightPixel.getColor());
+          }
+      }
+  }
+  
+  /** Method that mirrors the horizontal axis of the picture */
+  public void mirrorHorizontal(){
+      Pixel[][] pixels = this.getPixels2D();
+      Pixel upPixel = null;
+      Pixel downPixel = null;
+      int l = pixels.length;
+      for(int r  = 0; r < l / 2; r++){
+          for(int c = 0; c < pixels[0].length; c++){
+              upPixel =  pixels[r][c];
+              downPixel = pixels[l-1-r][c];
+              downPixel.setColor(upPixel.getColor());
+          }
+      }
+  }
+  
+  /** Method that mirrors the horizontal axis of the picture
+   *  from the bottom side to the top
+   */
+  public void mirrorHorizontalBTP(){
+      Pixel[][] pixels = this.getPixels2D();
+      Pixel upPixel = null;
+      Pixel downPixel = null;
+      int l = pixels.length;
+      for(int r  = 0; r < l / 2; r++){
+          for(int c = 0; c < pixels[0].length; c++){
+              upPixel =  pixels[r][c];
+              downPixel = pixels[l-1-r][c];
+              upPixel.setColor(downPixel.getColor());
+          }
+      }
+  }
+  
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
   {
@@ -179,6 +240,11 @@ public class Picture extends SimplePicture
       }
     }
   }
+  
+  /** Method that mirrors the diagonal of a picture */
+  public void mirrorDiagonal(){
+       
+    }
   
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
@@ -261,10 +327,10 @@ public class Picture extends SimplePicture
    */
   public static void main(String[] args) 
   {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.zeroBlue();
-    beach.explore();
+    Picture city = new Picture("city.jpg");
+    city.explore();
+    //city.zeroBlue();
+    //city.explore();
   }
   
 } // this } is the end of class Picture, put all new methods before this
