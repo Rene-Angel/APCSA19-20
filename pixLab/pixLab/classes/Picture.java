@@ -210,11 +210,26 @@ public class Picture extends SimplePicture
       int l = pixels.length;
       for(int r  = 0; r < l / 2; r++){
           for(int c = 0; c < pixels[0].length; c++){
-              upPixel =  pixels[r][c];
+              upPixel = pixels[r][c];
               downPixel = pixels[l-1-r][c];
               upPixel.setColor(downPixel.getColor());
           }
       }
+  }
+  
+  /** Method that mirrors the diagonal of a picture */
+  public void mirrorDiagonal(){
+       Pixel[][] pixels = this.getPixels2D();
+       Pixel leftPixel = null;
+       Pixel rightPixel = null;
+       int w = pixels[0].length;
+       for(int r = 0; r < pixels.length; r++){
+           for(int c = 0; c < w * .75; c++){
+               leftPixel = pixels[r][c];
+               rightPixel = pixels[c][r];
+               leftPixel.setColor(rightPixel.getColor());
+           }
+       }
   }
   
   /** Mirror just part of a picture of a temple */
@@ -232,19 +247,15 @@ public class Picture extends SimplePicture
       // loop from 13 to just before the mirror point
       for (int col = 13; col < mirrorPoint; col++)
       {
-        
+        count++;
         leftPixel = pixels[row][col];      
-        rightPixel = pixels[row]                       
-                         [mirrorPoint - col + mirrorPoint];
+        rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
         rightPixel.setColor(leftPixel.getColor());
       }
     }
+    System.out.println(count);
   }
   
-  /** Method that mirrors the diagonal of a picture */
-  public void mirrorDiagonal(){
-       
-    }
   
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the

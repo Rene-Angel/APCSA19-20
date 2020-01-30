@@ -141,7 +141,7 @@ public class Activity_Questions
               Pixel upPixel = null;
               Pixel downPixel = null;
               int l = pixels.length;
-              for(int r  = 0; r < l / 2; r++){
+              for(int r = 0; r < l / 2; r++){
                   for(int c = 0; c < pixels[0].length; c++){
                       upPixel =  pixels[r][c];
                       downPixel = pixels[l-1-r][c];
@@ -154,7 +154,7 @@ public class Activity_Questions
               Pixel upPixel = null;
               Pixel downPixel = null;
               int l = pixels.length;
-              for(int r  = 0; r < l / 2; r++){
+              for(int r = 0; r < l / 2; r++){
                   for(int c = 0; c < pixels[0].length; c++){
                       upPixel =  pixels[r][c];
                       downPixel = pixels[l-1-r][c];
@@ -162,6 +162,25 @@ public class Activity_Questions
                   }
               }
           }
-       4) 
+       4) public void mirrorDiagonal(){
+              Pixel[][] pixels= this.getPixel2D();
+              Pixel leftPixel = null;
+              Pixel rightPixel = null;
+              int w = pixels[0].length;
+              for(int r = 0; r < pixels.length; r++){
+                  for(int c = 0; c < w * .75; c++){
+                      leftPixel = pixels[r][c];
+                      rightPixel = pixels[c][r];
+                      leftPixel.setColor(rightPixel.getColor());
+                  }
+              }
+          }
+       -----------------------------------------------------------------
+       Activity 7 - Questions
+       1) 90 times
+       2) 90 times
+       
+       Activity 7 - Exercises
+       1) 
      */
 }
