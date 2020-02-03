@@ -253,9 +253,13 @@ public class Picture extends SimplePicture
         rightPixel.setColor(leftPixel.getColor());
       }
     }
-    System.out.println(count);
+    System.out.print(count);
   }
   
+  public void mirrorArms(){
+      int mirrorPoint = 276;
+      Pixel leftPixel
+    }
   
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the

@@ -181,6 +181,27 @@ public class Activity_Questions
        2) 90 times
        
        Activity 7 - Exercises
-       1) 
+       1) public void mirrorTemple()
+          {
+               int mirrorPoint = 276;
+               Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int count = 0;
+    Pixel[][] pixels = this.getPixels2D();
+    
+    // loop through the rows
+    for (int row = 27; row < 97; row++)
+    {
+      // loop from 13 to just before the mirror point
+      for (int col = 13; col < mirrorPoint; col++)
+      {
+        count++;
+        leftPixel = pixels[row][col];      
+        rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
+        rightPixel.setColor(leftPixel.getColor());
+      }
+    }
+    System.out.print(count);
+          }
      */
 }
