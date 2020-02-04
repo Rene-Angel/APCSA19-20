@@ -203,12 +203,12 @@ public class Picture extends SimplePicture
   /** Method that mirrors the horizontal axis of the picture
    *  from the bottom side to the top
    */
-  public void mirrorHorizontalBTP(){
+  public void mirrorHorizontalBTT(){
       Pixel[][] pixels = this.getPixels2D();
       Pixel upPixel = null;
       Pixel downPixel = null;
       int l = pixels.length;
-      for(int r  = 0; r < l / 2; r++){
+      for(int r = 0; r < l / 2; r++){
           for(int c = 0; c < pixels[0].length; c++){
               upPixel = pixels[r][c];
               downPixel = pixels[l-1-r][c];
@@ -256,10 +256,42 @@ public class Picture extends SimplePicture
     System.out.print(count);
   }
   
+  /** Mirror just the arms of the Snowman in the picture */
   public void mirrorArms(){
-      int mirrorPoint = 276;
-      Pixel leftPixel
-    }
+      int mp = 189; //mp = mirrorPoint
+      Pixel upPixel = null;
+      Pixel downPixel = null;
+      Pixel[][] pixels = this.getPixels2D();
+      for(int r = 159; r < mp; r++){
+          for(int c = 102; c < 170; c++){
+              upPixel = pixels[r][c];
+              downPixel = pixels[mp-r+mp][c];
+              downPixel.setColor(upPixel.getColor());
+          }
+      }
+      for(int r = 159; r < mp; r++){
+          for(int c = 238; c < 293; c++){
+              upPixel = pixels[r][c];
+              downPixel = pixels[mp-r+mp][c];
+              downPixel.setColor(upPixel.getColor());
+          }
+      }
+  }
+  
+  /**Method to mirror the Gull in the picture */
+  public void mirrorGull(){
+      int mp = 0;
+      Pixel leftPixel = null;
+      Pixel rightPixel = null;
+      Pixel[][] pixels = this.getPixels2D();
+      for(int r = 0; r < mp; r++){
+          for(int c = 0; c < mp; c++){
+              leftPixel = pixels[r][c];
+              rightPixel = pixels[r][mp-c+mp];
+              rightPixel = setColor(rightPixel.getColor());
+          }
+      }
+  }
   
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
