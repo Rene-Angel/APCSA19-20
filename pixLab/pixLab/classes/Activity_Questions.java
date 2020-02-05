@@ -203,7 +203,19 @@ public class Activity_Questions
               }
           }
        3) public void mirrorGull(){
-              
+              int mp = 345;
+              Pixel leftPixel = null;
+              Pixel rightPixel = null;
+              Pixel[][] pixels = this.getPixels2D();
+              for(int r = 235; r < 330; r++){
+                  for(int c = 237; c < mp; c++){
+                      leftPixel = pixels[r][c];
+                      rightPixel = pixels[r][mp-c+mp];
+                      rightPixel.setColor(leftPixel.getColor());
+                  }
+              }
           }
+        -----------------------------------------------------------------
+        Activity 8 - 
      */
 }

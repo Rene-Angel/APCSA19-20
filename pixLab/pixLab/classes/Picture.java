@@ -280,15 +280,15 @@ public class Picture extends SimplePicture
   
   /**Method to mirror the Gull in the picture */
   public void mirrorGull(){
-      int mp = 0;
+      int mp = 345;
       Pixel leftPixel = null;
       Pixel rightPixel = null;
       Pixel[][] pixels = this.getPixels2D();
-      for(int r = 0; r < mp; r++){
-          for(int c = 0; c < mp; c++){
+      for(int r = 235; r < 330; r++){
+          for(int c = 237; c < mp; c++){
               leftPixel = pixels[r][c];
               rightPixel = pixels[r][mp-c+mp];
-              rightPixel = setColor(rightPixel.getColor());
+              rightPixel.setColor(leftPixel.getColor());
           }
       }
   }
@@ -323,20 +323,45 @@ public class Picture extends SimplePicture
       }
     }   
   }
+  
+  public void copy2(Picture fromPic, 
+                 int startR, int endR, int startC,
+                 int endC, int startR2, int startC2)
+  {
+    Pixel fromPixel = null;
+    Pixel toPixel = null;
+    Pixel[][] toPixels = this.getPixels2D();
+    Pixel[][] fromPixels = fromPic.getPixels2D();
+    for (int fromRow = startR2, toRow = startR; 
+         fromRow < fromPixels.length &&
+         endR < toPixels.length; 
+         fromRow++, toRow++)
+    {
+      for (int fromCol = startC2, toCol = startC; 
+           fromCol < fromPixels[0].length &&
+           endC < toPixels[0].length;  
+           fromCol++, toCol++)
+      {
+        fromPixel = fromPixels[fromRow][fromCol];
+        toPixel = toPixels[toRow][toCol];
+        toPixel.setColor(fromPixel.getColor());
+      }
+    }   
+  }
 
   /** Method to create a collage of several pictures */
   public void createCollage()
   {
     Picture flower1 = new Picture("flower1.jpg");
     Picture flower2 = new Picture("flower2.jpg");
-    this.copy(flower1,0,0);
-    this.copy(flower2,100,0);
-    this.copy(flower1,200,0);
+    this.copy2(flower1,0,100,0,100,0,0);
+    this.copy2(flower2,0,200,0,100,0,0);
+    this.copy2(flower1,0,100,0,100,0,0);
     Picture flowerNoBlue = new Picture(flower2);
     flowerNoBlue.zeroBlue();
-    this.copy(flowerNoBlue,300,0);
-    this.copy(flower1,400,0);
-    this.copy(flower2,500,0);
+    this.copy2(flowerNoBlue,0,500,0,100,0,0);
+    this.copy2(flower1,0,100,0,100,0,0);
+    this.copy2(flower2,0,200,0,100,0,0);
     this.mirrorVertical();
     this.write("collage.jpg");
   }
