@@ -325,7 +325,7 @@ public class Picture extends SimplePicture
   }
   
   public void copy2(Picture fromPic, 
-                 int startR, int endR, int startC,
+                 int startR, int startC, int endR,
                  int endC, int startR2, int startC2)
   {
     Pixel fromPixel = null;
@@ -348,20 +348,37 @@ public class Picture extends SimplePicture
       }
     }   
   }
-
+  public void myCollage()
+  {
+    Picture flower1 = new Picture("flower1.jpg");
+    Picture flower2 = new Picture("flower2.jpg");
+    Picture city = new Picture ("city.jpg");
+    this.copy(city,0,0);
+    this.copy(flower1,0,0);
+    this.copy(flower2,100,0);
+    this.copy(flower1,200,0);
+    Picture flowerNoBlue = new Picture(flower2);
+    flowerNoBlue.zeroBlue();
+    this.copy(flowerNoBlue,300,0);
+    this.copy(flower1,400,0);
+    this.copy(flower2,500,0);
+    this.mirrorVertical();
+    this.write("collage.jpg");
+  }
+  
   /** Method to create a collage of several pictures */
   public void createCollage()
   {
     Picture flower1 = new Picture("flower1.jpg");
     Picture flower2 = new Picture("flower2.jpg");
-    this.copy2(flower1,0,100,0,100,0,0);
-    this.copy2(flower2,0,200,0,100,0,0);
-    this.copy2(flower1,0,100,0,100,0,0);
+    this.copy(flower1,0,0);
+    this.copy(flower2,100,0);
+    this.copy(flower1,200,0);
     Picture flowerNoBlue = new Picture(flower2);
     flowerNoBlue.zeroBlue();
-    this.copy2(flowerNoBlue,0,500,0,100,0,0);
-    this.copy2(flower1,0,100,0,100,0,0);
-    this.copy2(flower2,0,200,0,100,0,0);
+    this.copy(flowerNoBlue,300,0);
+    this.copy(flower1,400,0);
+    this.copy(flower2,500,0);
     this.mirrorVertical();
     this.write("collage.jpg");
   }

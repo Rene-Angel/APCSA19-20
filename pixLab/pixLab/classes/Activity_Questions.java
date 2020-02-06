@@ -1,13 +1,16 @@
-
 /**
- * Write a description of class Activity_Questions here.
+ * Don't judge me, this just makes sense :|. 
+ * Not only are there the responses to 
+ * activity questions that are answerable here, 
+ * but there is also the work I have done for the 
+ * exercises as well.
  *
  * @author Rene-Angel Jaime
- * @version (12.11.19)
+ * @version (12.11.19 - 2.6.20)
  */
 public class Activity_Questions
 {
-    /**  Activity 1 - Questions
+    /**Activity 1 - Questions
        1) It takes 8 bits to represent values from 0 to 255.
        2) It takes 3 bytes to represent a color.
        3) There are about 307200 pixels total in a 640x480 image.
@@ -216,6 +219,47 @@ public class Activity_Questions
               }
           }
         -----------------------------------------------------------------
-        Activity 8 - 
+        Activity 8 - Exercises
+        1) public void copy2(Picture fromPic, 
+                 int startR, int startC, int endR,
+                 int endC, int startR2, int startC2)
+           {
+               Pixel fromPixel = null;
+               Pixel toPixel = null;
+               Pixel[][] toPixels = this.getPixels2D();
+               Pixel[][] fromPixels = fromPic.getPixels2D();
+               for (int fromRow = startR2, toRow = startR; 
+                    fromRow < fromPixels.length &&
+                    endR < toPixels.length; 
+                    fromRow++, toRow++)
+               {
+                   for (int fromCol = startC2, toCol = startC; 
+                        fromCol < fromPixels[0].length &&
+                        endC < toPixels[0].length;  
+                        fromCol++, toCol++)
+                   {
+                       fromPixel = fromPixels[fromRow][fromCol];
+                       toPixel = toPixels[toRow][toCol];
+                       toPixel.setColor(fromPixel.getColor());
+                   }
+               }   
+           }
+        2) public void myCollage()
+           {
+                Picture flower1 = new Picture("flower1.jpg");
+                Picture flower2 = new Picture("flower2.jpg");
+                Picture city = new Picture ("city.jpg");
+                this.copy(city,0,0);
+                this.copy(flower1,0,0);
+                this.copy(flower2,100,0);
+                this.copy(flower1,200,0);
+                Picture flowerNoBlue = new Picture(flower2);
+                flowerNoBlue.zeroBlue();
+                this.copy(flowerNoBlue,300,0);
+                this.copy(flower1,400,0);
+                this.copy(flower2,500,0);
+                this.mirrorVertical();
+                this.write("collage.jpg");
+           }
      */
 }

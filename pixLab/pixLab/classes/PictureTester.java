@@ -127,6 +127,12 @@ public class PictureTester
     canvas.explore();
   }
   
+  public static void testMyCollage(){
+      Picture canvas = new Picture("640x480.jpg");
+      canvas.myCollage();
+      canvas.explore();
+  }
+  
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
