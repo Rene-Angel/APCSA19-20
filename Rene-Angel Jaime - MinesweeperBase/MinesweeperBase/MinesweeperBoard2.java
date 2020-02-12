@@ -7,8 +7,8 @@
 // 1 isBomb() DONE
 // 2 BoardConstructor() DONE
 // 3 printBoard() DONE
-// 4 addMines() Done
-// 5 addNums() done
+// 4 addMines() DONE
+// 5 addNums() DONE
 import java.lang.Math;
 import javax.swing.*;
 import java.awt.*;
