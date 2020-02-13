@@ -18,7 +18,6 @@ public class MinesweeperBoard2{
     Cell[] board;
     int rows;
     int columns;
-    
     public MinesweeperBoard2(int row, int col){ // Part 2
         //Put the constructor here.
         rows = row;

@@ -50,21 +50,33 @@ public class MinesweeperBoard2{
             for(int c = 0; c < board[0].length; c++){
                 if(board[r][c].isMine()){
                     //Right & Left
-                    /**if(){
-                        
+                    if(c > 0 && !board[r][c-1].isMine()){
+                        board[r][c-1].inc();
+                    }
+                    if(c+1 != board[0].length &&!board[r][c+1].isMine()){
+                        board[r][c+1].inc();
                     }
                     //Above & Below
-                    if(){
-                        
+                    if(r > 0 && !board[r-1][c].isMine()){
+                        board[r-1][c].inc();
+                    }
+                    if(r+1 != board.length && !board[r+1][c].isMine()){
+                        board[r+1][c].inc();
                     }
                     // Left Diagonals
-                    if(){
-                        
+                    if(r > 0 && c > 0 && !board[r-1][c-1].isMine()){
+                        board[r-1][c-1].inc();
+                    }
+                    if(r+1 != board.length && c > 0 && !board[r+1][c-1].isMine()){
+                        board[r+1][c-1].inc();
                     }
                     // Right Diagonals
-                    if(){
-                        
-                    } */
+                    if(r > 0 && c+1 != board[0].length && !board[r-1][c+1].isMine()){
+                        board[r-1][c+1].inc();
+                    }
+                    if(r+1 != board.length && c+1 != board[0].length && !board[r+1][c+1].isMine()){
+                        board[r+1][c+1].inc();
+                    }
                 }
             }
         }
@@ -73,28 +85,24 @@ public class MinesweeperBoard2{
      *  It is still required for all students.
      */
     public void printBoard(){
-        System.out.println("");
-        System.out.println("Minesweeper");
         for(int r = 0; r < board.length; r++){
             for(int c = 0; c < board[0].length; c++){
-                if(r % c == 0){
-                    System.out.println();
-                }
-                if(board[r][c].getValue() == -1){
-                   System.out.print(" X ");
-                   else                                          // printed...
-                   System.out.print(" ");                      // 0 X 0 
-                   System.out.print(board[r][c].getValue());      // X 0 X
-                   System.out.print(" ");                      // X 0 0
+                if(board[r][c].isMine()){
+                   System.out.print("X ");
+                } else{
+                   System.out.print(board[r][c].getValue() + " ");
                 }
             }
+            System.out.println();
         }
     }
     public JPanel addCells(){
-        JPanel panel = new JPanel(new GridLayout(rows,c));
+        JPanel panel = new JPanel(new GridLayout(r,c));
         for(int r = 0; r < board.length; r++){
-            board[i]= new Cell();
-            panel.add(board[r][c].getButton());
+            for(int c = 0; c < board[0].length; c++){
+                board[r][c] = new Cell();
+                panel.add(board[r][c].getButton());
+            }
         }
         return panel;
     }
