@@ -44,12 +44,12 @@ public class Cell implements ActionListener{
         } else{
             return false;
         }
-        // Would this would simplify it? "return value == -1;" I'm not to sure if it will
     }
     
     //Additional Methods may be required. Please make them yourself.
     
-    //The following methods are used for the User Inferface. These methods are fully functional and do not need to be modified.
+    //The following methods are used for the User Inferface
+    //These methods are fully functional and do not need to be modified.
     public void checkCell(){
         button.setEnabled(false);
         displayValue();
@@ -59,8 +59,26 @@ public class Cell implements ActionListener{
             button.setText("\u2600");
             button.setBackground(Color.RED);
         }else if(value!=0){
+            if(value == 1){
+                button.setBackground(Color.LIGHT_GRAY);
+            } else if(value == 2){
+                button.setBackground(Color.GRAY);
+            } else if(value == 3){
+                button.setBackground(Color.PINK);
+            } else if(value == 4){
+                button.setBackground(Color.MAGENTA);
+            } else if(value == 6){
+                button.setBackground(Color.CYAN);
+            } else if(value == 7){
+                button.setBackground(Color.YELLOW);
+            } else if(value == 8){
+                button.setBackground(Color.ORANGE);
+            } else {
+                button.setBackground(Color.WHITE);
+            }
             button.setText(String.valueOf(value));
         }
+        
     }
     public JButton getButton() {
         return button;
