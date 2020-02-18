@@ -99,5 +99,4 @@ public class MinesweeperBoard2{
         }
         return panel;
     }
-
 }
