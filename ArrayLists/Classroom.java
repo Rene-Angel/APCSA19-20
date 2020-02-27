@@ -5,9 +5,10 @@
  * @version (2.25.20)
  */
 import java.util.ArrayList;
+import java.util.List;
 public class Classroom
 {
-    ArrayList<Student> studentList;
+    List<Student> studentList;
     public Classroom(){
         studentList = new ArrayList<Student>();
     }
@@ -29,13 +30,22 @@ public class Classroom
         if(pos>=0){
             studentList.remove(pos);
         }
-        
     }
     public void dropStudent(Integer ID){
+        int id = ID.intValue();
+        int positionOfStudent = -1; // Default is not found.
         for(int i=0; i< studentList.size(); i++){
-            if(studentList.get(i).equals(ID)){
-                studentList.remove(i);
+            if(studentList.get(i).getID() == id){
+                positionOfStudent = i;
             }
         }
+        // then remove them
+        if(positionOfStudent >= 0){
+            studentList.remove(positionOfStudent);
+        }
+    }
+    public Student changeFirstStudent(Student student){
+        Student newStudent = studentList.set(0, student);
+        return newStudent;
     }
 }

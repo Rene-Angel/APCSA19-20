@@ -4,7 +4,6 @@
  * @author Rene-Angel Jaime
  * @version (2.24.20)
  */
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -41,6 +40,5 @@ public class Notes
                 words.remove(i);
             }
         }
-        
     }
 }

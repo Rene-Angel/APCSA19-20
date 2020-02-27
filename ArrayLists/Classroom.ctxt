@@ -10,4 +10,6 @@ comment4.params=oldStudent
 comment4.target=void\ dropStudent(Student)
 comment5.params=ID
 comment5.target=void\ dropStudent(java.lang.Integer)
-numComments=6
+comment6.params=student
+comment6.target=Student\ changeFirstStudent(Student)
+numComments=7
