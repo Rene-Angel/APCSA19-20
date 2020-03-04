@@ -2,19 +2,34 @@
  * @author Rene-Angel Jaime
  * @version (2.27.20)
  */
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Arraylist;
 
 public class Test
 {
+    public static int sumNegValues(ArrayList<Integer> list)
+    {
+        int sum = 0;
+        for(Integer element: list)
+        {
+            if (element < 0) {
+                sum += element;
+            }
+        }
+        return sum;
+    }
+
     public static void main(String[] args)
     {
-        List<String> names = new ArrayList<String>();
-        String[] friends = {"Sam", "Jessica", "Mark", "Alexis"};
-        for (int i = 0; i <= friends.length; i++)
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {-2, 34, -11, 9, -6, 3};
+        for (int i = 0; i < nums.length; i ++)
         {
-            names.add(friends[i]);
+            values.add(nums[i]);
         }
-        System.out.println(names);
+        System.out.println("Expected Result:\t -19");
+        System.out.print("Your Result:\t\t ");
+        System.out.println(sumNegValues(values));
     }
 }
