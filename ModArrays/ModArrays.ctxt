@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ModArrays
+comment1.params=array\ num\ i
+comment1.target=int[]\ method1(int[],\ int,\ int)
+comment2.params=array\ i
+comment2.target=int[]\ method2(int[],\ int)
+numComments=3

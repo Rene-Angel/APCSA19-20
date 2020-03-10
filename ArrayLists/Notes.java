@@ -19,7 +19,7 @@ public class Notes
         System.out.println(shoppingCart.get(0)); // looks into the index
     }
     public static void main(){
-        ArrayList<String> words = new ArrayList<String>(); // angel brackets < >
+        ArrayList<String> words = new ArrayList<String>(); // angle brackets < >
         words.add("Dog");
         words.add("Cat");
         words.add(0, "Cringe");
